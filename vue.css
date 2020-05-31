@@ -1,0 +1,166 @@
+@font-face {
+  font-family: "Helvetica";
+  src: local("Helvetica Neue Bold"),
+  local("HelveticaNeue-Bold"),
+  url("./HelveticaBold.otf"),
+  url("./HelveticaNeue.otf");
+ }
+
+.list-enter-active, .list-leave-active {
+  transition: all 1s;
+  position: absolute;
+}
+.list-enter   /* .list-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.list-move {
+  transition: all 1s;
+}
+
+  .todo {
+    display: flex;
+    margin-bottom: 1em;
+  }
+
+  .todotext {
+    /* font-size:.7em; */
+    width:600px;
+  }
+
+  body {
+    color:white;
+    font-family: 'Helvetica';
+    letter-spacing: -0.05em;
+    font-size: 1.5em;
+    margin:300px;
+    background-color: rgb(255, 145, 0);
+    background: #bc4e9c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f80759, #bc4e9c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f80759, #bc4e9c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    animation-name: start;
+    animation-duration: 1s;
+  }
+
+  #app-6 {
+    margin-bottom: 100px;
+  }
+
+  input {
+    width: 25em;
+    font-size: 2em;
+    font-family: 'Helvetica';
+    letter-spacing: -0.05em;
+    border:0;
+    background-color: rgb(255, 145, 0,0);
+    color:white;
+  }
+
+  ::placeholder {
+    color:white;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  /* .whitebar {
+    position:fixed;
+    background-color: white;
+    height:2px;
+    top:400px;
+    margin-left: -300px;
+    margin-right: -300px;
+    width: 100%;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+    animation-name: casselescouilles;
+
+  }
+
+  @keyframes casselescouilles {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  } */
+  @keyframes start {
+    from {
+      opacity:0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity:1;
+      transform: translateY(0px);
+    }
+  }
+
+  /* what follows is a special big font variant */
+  body {
+    margin-bottom: 200px;
+    /* margin-right: 0px; */
+  }
+
+  input {
+    /* these two lines are another variant */
+    /* margin-bottom: 1em; */
+    /* text-align: right; */
+    /* end of the new variant */
+    margin-bottom: .5em;
+    font-size: 4em;
+    width: 15em;
+  }
+  /* end of special big fond variant */
+
+  .info {
+    cursor:pointer;
+    position: fixed;
+    bottom:25px;
+    right:25px;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+    animation-name: casselescouilles;
+  }
+
+  @keyframes casselescouilles {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 900px) {
+    body {
+      box-sizing: border-box;
+      margin:80px;
+    }
+
+    input{
+      font-size: 1em;
+    }
+  
+    #app-6 , #app-7 ,input {
+      width:80%
+    }
+  }
