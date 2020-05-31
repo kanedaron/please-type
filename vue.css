@@ -157,10 +157,20 @@ background: linear-gradient(to right, #f80759, #bc4e9c); /* W3C, IE 10+/ Edge, F
     }
 
     input{
-      font-size: 1em;
+      margin-top:2em;
+      font-size: 2em;
+      width: 100%;
     }
   
-    #app-6 , #app-7 ,input {
-      width:80%
+    #app-6 , #app-7 {
+      width:100%
+    }
+
+    .li {
+      overflow-wrap: anywhere;
+    }
+
+    .info {
+      display: none;
     }
   }
