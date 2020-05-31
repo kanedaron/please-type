@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Please type.</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vue.css" />
+  </head>
+
+  <body>
+    <div onclick="window.open(&quot;https://github.com/kanedaron&quot;)" class="info">Press enter to save / Click or press 1,2,... to delete</div>
+    <div id="app-6">
+      <input
+        v-on:keyup="HotKey"
+        ref="taskedit"
+        v-focus
+        v-on:keyup.enter="addTodo"
+        v-model="message"
+        placeholder="Please type."
+      />
+      <!-- placeholder="ENTER to save / CLICK to delete" -->
+    </div>
+    <div id="app-7">
+      <transition-group name="list" tag="p">
+        <!-- Create an instance of the todo-item component -->
+
+        <todo-item
+          v-for="(item ,index) in groceryList"
+          v-bind:todo="item"
+          v-bind:key="item.id"
+          v-bind:index="index"
+        ></todo-item>
+      </transition-group>
+    </div>
+    <!-- <div class="whitebar"></div> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="vue.js"></script>
+  </body>
+</html>
