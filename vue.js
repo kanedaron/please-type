@@ -1,11 +1,11 @@
-// import styled from 'vue-styled-components';
-Vue.directive("focus", {
-  // Quand l'élément lié est inséré dans le DOM...
-  inserted: function (el) {
-    // L'élément prend le focus
-    el.focus();
-  },
-});
+// // import styled from 'vue-styled-components';
+// Vue.directive("focus", {
+//   // Quand l'élément lié est inséré dans le DOM...
+//   inserted: function (el) {
+//     // L'élément prend le focus
+//     el.focus();
+//   },
+// });
 var app6 = new Vue({
   el: "#app-6",
   data: {
